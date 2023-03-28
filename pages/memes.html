@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>memes</title>
+
+    <style>
+        body {
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            padding: 10px;
+            position: relative;
+            margin: 20px;
+            width: fit-content;
+            height: fit-content;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s ease;
+            color: rgb(245, 215, 158);
+        }
+
+
+        .card p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.5;
+            padding: 0 20px 20px 20px;
+            text-align: center;
+            height: 100%;
+            width: inherit;
+        }
+        .card img {
+            max-height: 60vh;
+            width:100%;
+            aspect-ratio: 1/1;
+            display: none;
+        }
+
+        .my-button {
+            color: #222;
+            box-shadow: 0 8px 16px rgba(245, 215, 158, 0.2);
+            transition: box-shadow 1s ease;
+            background-color: rgb(245, 215, 158);
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            font-weight: bold;
+        }
+
+        .my-button:active {
+            background-color: #222;
+            color: rgb(245, 215, 158);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <p id="memeTitle">load meme by clicking the button below.</p>
+            <img src="" alt="unable to get image" id="memeImg">
+        </div>
+    </div>
+    <button class="my-button" id="nextMeme" onclick="loadMeme()">load meme</button>
+
+    <script src="../js/memes.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokes</title>
+
+    <style>
+        body {
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            position: relative;
+            margin: 20px;
+            padding: 20px;
+            max-width: fit-content;
+            height: fit-content;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s ease;
+            color: rgb(245, 215, 158);
+        }
+
+        .card h2 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 23px;
+            text-align: left;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 20px;
+            line-height: 1.5;
+            padding: 10px 20px;
+            text-align: left;
+            height: 100%;
+        }
+        .card span{
+            display: block;
+        }
+
+        .my-button {
+            color: #222;
+            box-shadow: 0 8px 16px rgba(245, 215, 158, 0.2);
+            transition: box-shadow 0.3s ease;
+            background-color: rgb(245, 215, 158);
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translate(-50%,0%);
+            font-weight: bold;
+        }
+
+        .my-button:active {
+            background-color:  #222;
+            color:  rgb(245, 215, 158);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <span id="jokeCategory">Dark</span>
+            <h2 id="jokeSetup">Can you tell me the funniest joke on the planet ?</h2>
+            <p id="jokeDelivery">Human Beings</p>
+        </div>
+    </div>
+    <button class="my-button" onclick="loadJoke()">lol another</button>
+
+    <script src="../js/jokes.js"></script>
+
+</body>
+
+</html>
