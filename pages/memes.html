@@ -18,10 +18,10 @@
 
         .container {
             display: flex;
+            flex-direction: column;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            height: 100vh;
         }
 
         .card {
@@ -46,11 +46,17 @@
             height: 100%;
             width: inherit;
         }
+
         .card img {
             max-height: 60vh;
-            width:100%;
+            width: 100%;
             aspect-ratio: 1/1;
             display: none;
+        }
+
+        .button{
+            text-align: center;
+            margin-top: 30px;
         }
 
         .my-button {
@@ -64,11 +70,6 @@
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            position: absolute;
-            bottom: 50px;
-            left: 50%;
-            transform: translate(-50%, 0%);
-            font-weight: bold;
         }
 
         .my-button:active {
@@ -87,8 +88,9 @@
             <img src="" alt="unable to get image" id="memeImg">
         </div>
     </div>
-    <button class="my-button" id="nextMeme" onclick="loadMeme()">load meme</button>
-
+    <div class="button"> 
+        <button class="my-button" id="nextMeme" onclick="loadMeme()">load meme</button>
+    </div>
     <script src="../js/memes.js"></script>
 
 </body>
